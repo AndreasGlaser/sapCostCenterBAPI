@@ -1,0 +1,13 @@
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csprojAssemblyReference.cache
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.Form1.resources
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.Properties.Resources.resources
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.GenerateResource.cache
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.CoreCompileInputs.cache
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\bin\Debug\sapmitDennis.exe.config
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\bin\Debug\sapmitDennis.exe
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\bin\Debug\sapmitDennis.pdb
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\bin\Debug\sapnco.dll
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\bin\Debug\sapnco_utils.dll
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.CopyComplete
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.exe
+D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.pdb
