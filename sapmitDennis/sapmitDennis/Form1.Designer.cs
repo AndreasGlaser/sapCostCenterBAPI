@@ -31,16 +31,18 @@
             this.loginbtn = new System.Windows.Forms.Button();
             this.connectionlbl = new System.Windows.Forms.Label();
             this.getListBtn = new System.Windows.Forms.Button();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.getListBox = new System.Windows.Forms.ListBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.getListGridView = new System.Windows.Forms.DataGridView();
+            this.Cost_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Groupname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostAreaSearch = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // loginbtn
             // 
             this.loginbtn.Location = new System.Drawing.Point(54, 45);
-            this.loginbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginbtn.Margin = new System.Windows.Forms.Padding(2);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(56, 19);
             this.loginbtn.TabIndex = 0;
@@ -62,7 +64,7 @@
             // getListBtn
             // 
             this.getListBtn.Location = new System.Drawing.Point(318, 28);
-            this.getListBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.getListBtn.Margin = new System.Windows.Forms.Padding(2);
             this.getListBtn.Name = "getListBtn";
             this.getListBtn.Size = new System.Drawing.Size(56, 19);
             this.getListBtn.TabIndex = 2;
@@ -70,53 +72,62 @@
             this.getListBtn.UseVisualStyleBackColor = true;
             this.getListBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lbl1
+            // getListGridView
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(2, 0);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(60, 13);
-            this.lbl1.TabIndex = 3;
-            this.lbl1.Text = "Description";
+            this.getListGridView.AllowUserToAddRows = false;
+            this.getListGridView.AllowUserToDeleteRows = false;
+            this.getListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.getListGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cost_Area,
+            this.Groupname,
+            this.Description});
+            this.getListGridView.Location = new System.Drawing.Point(305, 110);
+            this.getListGridView.Name = "getListGridView";
+            this.getListGridView.ReadOnly = true;
+            this.getListGridView.Size = new System.Drawing.Size(458, 275);
+            this.getListGridView.TabIndex = 6;
             // 
-            // getListBox
+            // Cost_Area
             // 
-            this.getListBox.FormattingEnabled = true;
-            this.getListBox.Location = new System.Drawing.Point(3, 28);
-            this.getListBox.Name = "getListBox";
-            this.getListBox.Size = new System.Drawing.Size(213, 225);
-            this.getListBox.TabIndex = 4;
+            this.Cost_Area.HeaderText = "Cost_Area";
+            this.Cost_Area.Name = "Cost_Area";
+            this.Cost_Area.ReadOnly = true;
             // 
-            // tableLayoutPanel1
+            // Groupname
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.getListBox, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(318, 68);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.557377F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.44262F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(438, 385);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.Groupname.HeaderText = "Groupname";
+            this.Groupname.Name = "Groupname";
+            this.Groupname.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            // 
+            // CostAreaSearch
+            // 
+            this.CostAreaSearch.Location = new System.Drawing.Point(431, 26);
+            this.CostAreaSearch.Name = "CostAreaSearch";
+            this.CostAreaSearch.Size = new System.Drawing.Size(100, 20);
+            this.CostAreaSearch.TabIndex = 7;
+            this.CostAreaSearch.Text = "1000";
+            this.CostAreaSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 495);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.CostAreaSearch);
+            this.Controls.Add(this.getListGridView);
             this.Controls.Add(this.getListBtn);
             this.Controls.Add(this.connectionlbl);
             this.Controls.Add(this.loginbtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,9 +138,11 @@
         private System.Windows.Forms.Button loginbtn;
         private System.Windows.Forms.Label connectionlbl;
         private System.Windows.Forms.Button getListBtn;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.ListBox getListBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView getListGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost_Area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Groupname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.TextBox CostAreaSearch;
     }
 }
 

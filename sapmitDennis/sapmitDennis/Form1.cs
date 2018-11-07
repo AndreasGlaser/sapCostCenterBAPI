@@ -47,15 +47,18 @@ namespace sapmitDennis
                 RfcRepository rfcRepository = rfcDestination.Repository;
                 var getList = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_GETLIST");
                 getList.Invoke(rfcDestination);
-                getList.SetValue("CONTROLLINGAREAMASK", "0001");
+                getList.SetValue("CONTROLLINGAREAMASK", CostAreaSearch.Text);
                 getList.Invoke(rfcDestination);
 
                 var table = getList.GetTable("GROUPLIST");
-                getListBox.Items.Clear();
+                getListGridView.Rows.Clear();
                 for (int i = 0; i < table.RowCount; i++)
                 {
-                    
-                    getListBox.Items.Add(table[i].GetString("DESCRIPT"));
+                    String costArea = table[i].GetString("CO_AREA");
+                    String groupname = table[i].GetString("GROUPNAME");
+                    String descript = table[i].GetString("DESCRIPT");
+                    String[] row = { costArea, groupname, descript };
+                    getListGridView.Rows.Add(row);
                 }
             }
             catch (RfcCommunicationException ex)
@@ -80,6 +83,11 @@ namespace sapmitDennis
         }
 
         private void lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
