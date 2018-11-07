@@ -12,10 +12,10 @@ namespace sapmitDennis
 {
 
 
-    public partial class Form1 : Form
+    public partial class getDetailDataGrid : Form
     {
         RfcDestination rfcDestination=null;
-        public Form1()
+        public getDetailDataGrid()
         {
             InitializeComponent();
         }
@@ -63,19 +63,19 @@ namespace sapmitDennis
             }
             catch (RfcCommunicationException ex)
             {
-
+                Console.Out.WriteLine(ex.Message);
             }
             catch (RfcLogonException ex)
             {
-
+                Console.Out.WriteLine(ex.Message);
             }
             catch (RfcAbapRuntimeException ex)
             {
-
+                Console.Out.WriteLine(ex.Message);
             }
             catch(Exception ex)
             {
-
+                Console.Out.WriteLine(ex.Message);
             }
 
 
@@ -90,6 +90,48 @@ namespace sapmitDennis
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void getDetailBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RfcRepository rfcRepository = rfcDestination.Repository;
+                var getList = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_GETDETAIL");
+                getList.Invoke(rfcDestination);
+                getList.SetValue("CONTROLLINGAREA", "1000");
+                getList.SetValue("GROUPNAME", "B00");
+                getList.Invoke(rfcDestination);
+
+                var table = getList.GetTable("HIERARCHYNODES");
+                var table2 = getList.GetTable("HIERARCHYVALUES");
+                getListGridView.Rows.Clear();
+                for (int i = 0; i < table.RowCount; i++)
+                {
+                    String hierlevel = table[i].GetString("HIERLEVEL");
+                    String groupname = table[i].GetString("GROUPNAME");
+                    String valcount = table[i].GetString("VALCOUNT");
+                    String descript = table[i].GetString("DESCRIPT");
+                    String[] row = { groupname, hierlevel, valcount, descript };
+                    getDetailGridView.Rows.Add(row);
+                }
+            }
+            catch (RfcCommunicationException ex)
+            {
+                Console.Out.WriteLine(ex.Message);
+            }
+            catch (RfcLogonException ex)
+            {
+                Console.Out.WriteLine(ex.Message);
+            }
+            catch (RfcAbapRuntimeException ex)
+            {
+                Console.Out.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine(ex.Message);
+            }
         }
     }
 }
