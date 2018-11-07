@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="sapnco">
-      <HintPath>..\..\..\..\..\..\Programme (x86)\sapConnector\sapnco.dll</HintPath>
+      <HintPath>..\..\..\..\..\Programme\sapConnector\sapnco.dll</HintPath>
     </Reference>
     <Reference Include="sapnco_utils">
-      <HintPath>..\..\..\..\..\..\Programme (x86)\sapConnector\sapnco_utils.dll</HintPath>
+      <HintPath>..\..\..\..\..\Programme\sapConnector\sapnco_utils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

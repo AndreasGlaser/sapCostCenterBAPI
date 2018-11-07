@@ -31,12 +31,12 @@ namespace sapmitDennis
                 if (rfcDestination != null)
                 {
                     rfcDestination.Ping();
-                    lbl.Text = "conected";
+                    connectionlbl.Text = "connected";
                 }
 
             }catch (Exception e1){
                 Console.WriteLine(e1.Message);
-                lbl.Text = "failed";
+                connectionlbl.Text = "failed";
             }
         }
 
@@ -51,10 +51,11 @@ namespace sapmitDennis
                 getList.Invoke(rfcDestination);
 
                 var table = getList.GetTable("GROUPLIST");
-
+                getListBox.Items.Clear();
                 for (int i = 0; i < table.RowCount; i++)
                 {
-                    lbl2.Text += table[i].GetString("DESCRIPT") + " || ";
+                    
+                    getListBox.Items.Add(table[i].GetString("DESCRIPT"));
                 }
             }
             catch (RfcCommunicationException ex)
@@ -75,6 +76,11 @@ namespace sapmitDennis
             }
 
 
+
+        }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
 
         }
     }

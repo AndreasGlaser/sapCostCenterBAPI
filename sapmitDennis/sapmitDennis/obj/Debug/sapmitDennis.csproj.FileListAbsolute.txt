@@ -11,3 +11,16 @@ D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\bin\Debug\sa
 D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.CopyComplete
 D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.exe
 D:\Programme\Microsoft\VisualStudio\repos\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.pdb
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csprojAssemblyReference.cache
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.Form1.resources
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.Properties.Resources.resources
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.GenerateResource.cache
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.CoreCompileInputs.cache
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\bin\Debug\sapmitDennis.exe.config
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\bin\Debug\sapmitDennis.exe
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\bin\Debug\sapmitDennis.pdb
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\bin\Debug\sapnco.dll
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\bin\Debug\sapnco_utils.dll
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.csproj.CopyComplete
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.exe
+I:\Workspaces\GitHub\sapCostCenter\sapmitDennis\sapmitDennis\obj\Debug\sapmitDennis.pdb
