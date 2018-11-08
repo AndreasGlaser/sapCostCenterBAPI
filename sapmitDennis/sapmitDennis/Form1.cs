@@ -97,19 +97,19 @@ namespace sapmitDennis
             try
             {
                 RfcRepository rfcRepository = rfcDestination.Repository;
-                var getList = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_GETDETAIL");
-                getList.Invoke(rfcDestination);
+                var getDetail = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_GETDETAIL");
+                getDetail.Invoke(rfcDestination);
                 
 
                 String contrArea = getListGridView.SelectedRows[0].Cells[0].Value.ToString();
                 String groupName = getListGridView.SelectedRows[0].Cells[1].Value.ToString();
 
-                getList.SetValue("CONTROLLINGAREA", contrArea);
-                getList.SetValue("GROUPNAME", groupName);
-                getList.Invoke(rfcDestination);
+                getDetail.SetValue("CONTROLLINGAREA", contrArea);
+                getDetail.SetValue("GROUPNAME", groupName);
+                getDetail.Invoke(rfcDestination);
 
-                var table = getList.GetTable("HIERARCHYNODES");
-                var table2 = getList.GetTable("HIERARCHYVALUES");
+                var table = getDetail.GetTable("HIERARCHYNODES");
+                var table2 = getDetail.GetTable("HIERARCHYVALUES");
                 getDetailGridView.Rows.Clear();
                 for (int i = 0; i < table.RowCount; i++)
                 {
