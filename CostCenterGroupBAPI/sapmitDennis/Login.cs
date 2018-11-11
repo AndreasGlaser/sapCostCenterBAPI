@@ -31,11 +31,8 @@ namespace CostCenterGroupBAPI
                 {
                     Connection.rfcDestination.Ping();
                     connectionlbl.Text = "connected";
-                    //new Overview().Show();
-                    //Application.Run(new Overview());
                     this.Hide();
                     new Overview().ShowDialog();
-                    
                     this.Close();
                 }
 
