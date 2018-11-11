@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SAP.Middleware.Connector;
 using System.Configuration;
-namespace sapmitDennis
+namespace CostCenterGroupBAPI
 {
     class connector : IDestinationConfiguration
     {

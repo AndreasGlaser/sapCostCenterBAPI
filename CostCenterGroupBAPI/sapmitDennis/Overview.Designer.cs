@@ -1,6 +1,6 @@
-﻿namespace sapmitDennis
+﻿namespace CostCenterGroupBAPI
 {
-    partial class getDetailDataGrid
+    partial class Overview
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,59 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.loginbtn = new System.Windows.Forms.Button();
-            this.connectionlbl = new System.Windows.Forms.Label();
             this.getListBtn = new System.Windows.Forms.Button();
             this.getListGridView = new System.Windows.Forms.DataGridView();
-            this.CostAreaSearch = new System.Windows.Forms.TextBox();
-            this.getDetailBtn = new System.Windows.Forms.Button();
-            this.getDetailGridView = new System.Windows.Forms.DataGridView();
             this.Cost_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Groupname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostAreaSearch = new System.Windows.Forms.TextBox();
+            this.getDetailBtn = new System.Windows.Forms.Button();
+            this.getDetailGridView = new System.Windows.Forms.DataGridView();
             this.Groupname2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HierarchyLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descript = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createGridView = new System.Windows.Forms.DataGridView();
-            this.createBtn = new System.Windows.Forms.Button();
             this.createCost_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createGroupname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HierLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createValcount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createDescript = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.createGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // loginbtn
-            // 
-            this.loginbtn.Location = new System.Drawing.Point(72, 55);
-            this.loginbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(75, 23);
-            this.loginbtn.TabIndex = 0;
-            this.loginbtn.Text = "Login";
-            this.loginbtn.UseVisualStyleBackColor = true;
-            this.loginbtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // connectionlbl
-            // 
-            this.connectionlbl.AutoSize = true;
-            this.connectionlbl.Location = new System.Drawing.Point(197, 59);
-            this.connectionlbl.Name = "connectionlbl";
-            this.connectionlbl.Size = new System.Drawing.Size(100, 17);
-            this.connectionlbl.TabIndex = 1;
-            this.connectionlbl.Text = "not Connected";
-            this.connectionlbl.Click += new System.EventHandler(this.lbl_Click);
-            // 
             // getListBtn
             // 
-            this.getListBtn.Location = new System.Drawing.Point(648, 34);
-            this.getListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getListBtn.Location = new System.Drawing.Point(486, 28);
+            this.getListBtn.Margin = new System.Windows.Forms.Padding(2);
             this.getListBtn.Name = "getListBtn";
-            this.getListBtn.Size = new System.Drawing.Size(75, 23);
+            this.getListBtn.Size = new System.Drawing.Size(56, 19);
             this.getListBtn.TabIndex = 2;
             this.getListBtn.Text = "GetList";
             this.getListBtn.UseVisualStyleBackColor = true;
@@ -95,51 +72,12 @@
             this.Cost_Area,
             this.Groupname,
             this.Description});
-            this.getListGridView.Location = new System.Drawing.Point(648, 95);
-            this.getListGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.getListGridView.Location = new System.Drawing.Point(486, 77);
             this.getListGridView.Name = "getListGridView";
             this.getListGridView.ReadOnly = true;
-            this.getListGridView.Size = new System.Drawing.Size(515, 264);
+            this.getListGridView.Size = new System.Drawing.Size(386, 214);
             this.getListGridView.TabIndex = 6;
             this.getListGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getListGridView_CellContentClick);
-            // 
-            // CostAreaSearch
-            // 
-            this.CostAreaSearch.Location = new System.Drawing.Point(804, 34);
-            this.CostAreaSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CostAreaSearch.Name = "CostAreaSearch";
-            this.CostAreaSearch.Size = new System.Drawing.Size(132, 22);
-            this.CostAreaSearch.TabIndex = 7;
-            this.CostAreaSearch.Text = "1000";
-            this.CostAreaSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // getDetailBtn
-            // 
-            this.getDetailBtn.Location = new System.Drawing.Point(201, 135);
-            this.getDetailBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.getDetailBtn.Name = "getDetailBtn";
-            this.getDetailBtn.Size = new System.Drawing.Size(100, 28);
-            this.getDetailBtn.TabIndex = 8;
-            this.getDetailBtn.Text = "Get Detail";
-            this.getDetailBtn.UseVisualStyleBackColor = true;
-            this.getDetailBtn.Click += new System.EventHandler(this.getDetailBtn_Click);
-            // 
-            // getDetailGridView
-            // 
-            this.getDetailGridView.AllowUserToAddRows = false;
-            this.getDetailGridView.AllowUserToDeleteRows = false;
-            this.getDetailGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.getDetailGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Groupname2,
-            this.HierarchyLevel,
-            this.ValCount,
-            this.Descript});
-            this.getDetailGridView.Location = new System.Drawing.Point(13, 171);
-            this.getDetailGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.getDetailGridView.Name = "getDetailGridView";
-            this.getDetailGridView.ReadOnly = true;
-            this.getDetailGridView.Size = new System.Drawing.Size(580, 170);
-            this.getDetailGridView.TabIndex = 9;
             // 
             // Cost_Area
             // 
@@ -164,6 +102,41 @@
             this.Description.MinimumWidth = 100;
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
+            // 
+            // CostAreaSearch
+            // 
+            this.CostAreaSearch.Location = new System.Drawing.Point(603, 28);
+            this.CostAreaSearch.Name = "CostAreaSearch";
+            this.CostAreaSearch.Size = new System.Drawing.Size(100, 20);
+            this.CostAreaSearch.TabIndex = 7;
+            this.CostAreaSearch.Text = "1000";
+            this.CostAreaSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // getDetailBtn
+            // 
+            this.getDetailBtn.Location = new System.Drawing.Point(151, 110);
+            this.getDetailBtn.Name = "getDetailBtn";
+            this.getDetailBtn.Size = new System.Drawing.Size(75, 23);
+            this.getDetailBtn.TabIndex = 8;
+            this.getDetailBtn.Text = "Get Detail";
+            this.getDetailBtn.UseVisualStyleBackColor = true;
+            this.getDetailBtn.Click += new System.EventHandler(this.getDetailBtn_Click);
+            // 
+            // getDetailGridView
+            // 
+            this.getDetailGridView.AllowUserToAddRows = false;
+            this.getDetailGridView.AllowUserToDeleteRows = false;
+            this.getDetailGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.getDetailGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Groupname2,
+            this.HierarchyLevel,
+            this.ValCount,
+            this.Descript});
+            this.getDetailGridView.Location = new System.Drawing.Point(10, 139);
+            this.getDetailGridView.Name = "getDetailGridView";
+            this.getDetailGridView.ReadOnly = true;
+            this.getDetailGridView.Size = new System.Drawing.Size(435, 138);
+            this.getDetailGridView.TabIndex = 9;
             // 
             // Groupname2
             // 
@@ -202,21 +175,12 @@
             this.HierLevel,
             this.createValcount,
             this.createDescript});
-            this.createGridView.Location = new System.Drawing.Point(36, 395);
+            this.createGridView.Location = new System.Drawing.Point(27, 321);
+            this.createGridView.Margin = new System.Windows.Forms.Padding(2);
             this.createGridView.Name = "createGridView";
             this.createGridView.RowTemplate.Height = 24;
-            this.createGridView.Size = new System.Drawing.Size(900, 150);
+            this.createGridView.Size = new System.Drawing.Size(675, 122);
             this.createGridView.TabIndex = 10;
-            // 
-            // createBtn
-            // 
-            this.createBtn.Location = new System.Drawing.Point(963, 522);
-            this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(149, 23);
-            this.createBtn.TabIndex = 11;
-            this.createBtn.Text = "create CostCenter";
-            this.createBtn.UseVisualStyleBackColor = true;
-            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // createCost_Area
             // 
@@ -243,11 +207,22 @@
             this.createDescript.HeaderText = "Descript";
             this.createDescript.Name = "createDescript";
             // 
-            // getDetailDataGrid
+            // createBtn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.createBtn.Location = new System.Drawing.Point(722, 424);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.createBtn.Name = "createBtn";
+            this.createBtn.Size = new System.Drawing.Size(112, 19);
+            this.createBtn.TabIndex = 11;
+            this.createBtn.Text = "create CostCenter";
+            this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
+            // Overview
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 609);
+            this.ClientSize = new System.Drawing.Size(882, 495);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.createGridView);
             this.Controls.Add(this.getDetailGridView);
@@ -255,10 +230,8 @@
             this.Controls.Add(this.CostAreaSearch);
             this.Controls.Add(this.getListGridView);
             this.Controls.Add(this.getListBtn);
-            this.Controls.Add(this.connectionlbl);
-            this.Controls.Add(this.loginbtn);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "getDetailDataGrid";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Overview";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).EndInit();
@@ -269,9 +242,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button loginbtn;
-        private System.Windows.Forms.Label connectionlbl;
         private System.Windows.Forms.Button getListBtn;
         private System.Windows.Forms.DataGridView getListGridView;
         private System.Windows.Forms.TextBox CostAreaSearch;

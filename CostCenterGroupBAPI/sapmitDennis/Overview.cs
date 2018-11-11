@@ -8,37 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SAP.Middleware.Connector;
-namespace sapmitDennis
+namespace CostCenterGroupBAPI
 {
 
 
-    public partial class getDetailDataGrid : Form
+    public partial class Overview : Form
     {
-        RfcDestination rfcDestination=null;
-        public getDetailDataGrid()
+        RfcDestination rfcDestination= Connection.rfcDestination;
+        public Overview()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            connector sapconnector = new connector();
-            RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
-            rfcDestination = null;
-            rfcDestination = RfcDestinationManager.GetDestination("costCenter");
-            try
-            {
-                if (rfcDestination != null)
-                {
-                    rfcDestination.Ping();
-                    connectionlbl.Text = "connected";
-                }
-
-            }catch (Exception e1){
-                Console.WriteLine(e1.Message);
-                connectionlbl.Text = "failed";
-            }
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
