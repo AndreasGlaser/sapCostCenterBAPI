@@ -128,7 +128,7 @@ namespace CostCenterGroupBAPI
 
         void DataWindow_Closing(object sender, CancelEventArgs e)
         {
-
+            this.Close();
 
         }
             private void CreateGroupBtn_Click(object sender, EventArgs e)
