@@ -12,3 +12,5 @@ I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Debug\Co
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Debug\CostCenterGroupBAPI.pdb
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Debug\CostCenterGroupBAPI.Login.resources
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Debug\CostCenterGroupBAPI.Overview.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Debug\CostCenterGroupBAPI.AddNode.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Debug\CostCenterGroupBAPI.CreateGroup.resources
