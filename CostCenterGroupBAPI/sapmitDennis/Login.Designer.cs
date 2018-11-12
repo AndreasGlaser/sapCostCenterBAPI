@@ -35,6 +35,7 @@
             this.PassBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Infolabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loginbtn
@@ -93,11 +94,21 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
+            // Infolabel
+            // 
+            this.Infolabel.AutoSize = true;
+            this.Infolabel.Location = new System.Drawing.Point(93, 195);
+            this.Infolabel.MaximumSize = new System.Drawing.Size(200, 0);
+            this.Infolabel.Name = "Infolabel";
+            this.Infolabel.Size = new System.Drawing.Size(0, 13);
+            this.Infolabel.TabIndex = 7;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(301, 246);
+            this.Controls.Add(this.Infolabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PassBox);
@@ -120,5 +131,6 @@
         private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Infolabel;
     }
 }

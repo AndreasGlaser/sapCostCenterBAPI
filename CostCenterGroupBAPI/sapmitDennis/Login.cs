@@ -24,7 +24,12 @@ namespace CostCenterGroupBAPI
         {
             connector sapconnector = new connector();
             
-            RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
+            Console.Out.WriteLine(RfcDestinationManager.IsDestinationConfigurationRegistered());
+            if (!RfcDestinationManager.IsDestinationConfigurationRegistered())
+            {
+                RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
+            }
+
             Connection.rfcDestination = null;
             Connection.rfcDestination = RfcDestinationManager.GetDestination("costCenter");
             try
@@ -38,10 +43,20 @@ namespace CostCenterGroupBAPI
                     this.Close();
                 }
 
-            }catch (Exception e1){
+            }
+            catch (SAP.Middleware.Connector.RfcLogonException ex)
+            {
+                Infolabel.Text = ex.Message;
+                Console.WriteLine(ex.Message);
+                connectionlbl.Text = "failed";
+                connectionlbl.BackColor = Color.Red;
+            }
+            catch (Exception e1)
+            {
                 Console.WriteLine(e1.Message);
                 connectionlbl.Text = "failed";
                 connectionlbl.BackColor = Color.Red;
+
             }
         }
 
