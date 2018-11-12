@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overview));
             this.getListBtn = new System.Windows.Forms.Button();
             this.getListGridView = new System.Windows.Forms.DataGridView();
             this.Cost_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -192,9 +193,10 @@
             this.Controls.Add(this.CostAreaSearch);
             this.Controls.Add(this.getListGridView);
             this.Controls.Add(this.getListBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Overview";
-            this.Text = "Form1";
+            this.Text = "CostCenterGroupBAPI";
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).EndInit();
             this.ResumeLayout(false);

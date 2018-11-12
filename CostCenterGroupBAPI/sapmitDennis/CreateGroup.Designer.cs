@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateGroup));
             this.createGridView = new System.Windows.Forms.DataGridView();
             this.createCost_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createGroupname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +100,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.createGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateGroup";
             this.Text = "CreateGroup";
             ((System.ComponentModel.ISupportInitialize)(this.createGridView)).EndInit();

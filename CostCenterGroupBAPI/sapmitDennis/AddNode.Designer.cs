@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNode));
             this.AddGridView = new System.Windows.Forms.DataGridView();
             this.ControllingArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +84,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.AddGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddNode";
             this.Text = "AddNode";
             ((System.ComponentModel.ISupportInitialize)(this.AddGridView)).EndInit();

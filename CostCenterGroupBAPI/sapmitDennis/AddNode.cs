@@ -39,18 +39,6 @@ namespace CostCenterGroupBAPI
                 AddNode.Invoke(rfcDestination);
                 this.Close();
             }
-            /*catch (RfcCommunicationException ex)
-            {
-                Console.Out.WriteLine(ex.Message);
-            }
-            catch (RfcLogonException ex)
-            {
-                Console.Out.WriteLine(ex.Message);
-            }
-            catch (RfcAbapRuntimeException ex)
-            {
-                Console.Out.WriteLine(ex.Message);
-            }*/
             catch (Exception ex)
             {
                 Console.Out.WriteLine(ex.Message);

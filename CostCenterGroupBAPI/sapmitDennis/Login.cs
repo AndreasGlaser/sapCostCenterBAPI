@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -40,7 +41,18 @@ namespace CostCenterGroupBAPI
             }catch (Exception e1){
                 Console.WriteLine(e1.Message);
                 connectionlbl.Text = "failed";
+                connectionlbl.BackColor = Color.Red;
             }
+        }
+
+        private void NameBox_TextChanged(object sender, EventArgs e)
+        {
+            ConfigurationManager.AppSettings["SAP_USERNAME"] = NameBox.Text;
+        }
+
+        private void PassBox_TextChanged(object sender, EventArgs e)
+        {
+            ConfigurationManager.AppSettings["SAP_PASSWORD"] = PassBox.Text;
         }
     }
 }
