@@ -131,14 +131,15 @@ namespace CostCenterGroupBAPI
             this.Close();
 
         }
-            private void CreateGroupBtn_Click(object sender, EventArgs e)
+
+        private void CreateGroupBtn_Click(object sender, EventArgs e)
         {
-            new CreateGroup().Show();
+            new CreateGroup().ShowDialog();
         }
 
         private void AddNodeBtn_Click(object sender, EventArgs e)
         {
-            new AddNode().Show();
+            new AddNode().ShowDialog();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace CostCenterGroupBAPI
         private void loginbtn_Click(object sender, EventArgs e)
         {
             connector sapconnector = new connector();
+            
             RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
             Connection.rfcDestination = null;
             Connection.rfcDestination = RfcDestinationManager.GetDestination("costCenter");

@@ -40,6 +40,8 @@
             // 
             // createGridView
             // 
+            this.createGridView.AllowUserToAddRows = false;
+            this.createGridView.AllowUserToDeleteRows = false;
             this.createGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.createGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.createCost_Area,

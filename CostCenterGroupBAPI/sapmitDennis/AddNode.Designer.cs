@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.AddGridView = new System.Windows.Forms.DataGridView();
-            this.AddBtn = new System.Windows.Forms.Button();
             this.ControllingArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubGroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AddGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,16 +50,6 @@
             this.AddGridView.Size = new System.Drawing.Size(675, 122);
             this.AddGridView.TabIndex = 12;
             // 
-            // AddBtn
-            // 
-            this.AddBtn.Location = new System.Drawing.Point(637, 313);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(112, 19);
-            this.AddBtn.TabIndex = 13;
-            this.AddBtn.Text = "Add Node to Center";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            // 
             // ControllingArea
             // 
             this.ControllingArea.HeaderText = "ControllingArea";
@@ -74,6 +64,17 @@
             // 
             this.SubGroupName.HeaderText = "SubGroupName";
             this.SubGroupName.Name = "SubGroupName";
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(637, 313);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(112, 19);
+            this.AddBtn.TabIndex = 13;
+            this.AddBtn.Text = "Add Node to Center";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // AddNode
             // 

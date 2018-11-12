@@ -13,16 +13,20 @@ namespace CostCenterGroupBAPI
 {
     public partial class CreateGroup : Form
     {
+        RfcDestination rfcDestination = Connection.rfcDestination;
         public CreateGroup()
         {
+            
             InitializeComponent();
+            String[] row = { "1000", "ATEST", "0", "0", "TestTest2" };
+            createGridView.Rows.Add(row);
         }
 
         private void createBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                RfcDestination rfcDestination = Connection.rfcDestination;
+                
 
                 RfcRepository rfcRepository = rfcDestination.Repository;
                 var create = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_CREATE");
@@ -36,19 +40,16 @@ namespace CostCenterGroupBAPI
                 hierarchyTable.Append();
                 IRfcTable hierarchyValuesTable = create.GetTable("HIERARCHYVALUES");
 
-                //for (int i = 0; i < createGridView.RowCount; i++)
-                //{
 
                 String groupName = createGridView.Rows[0].Cells[1].Value.ToString();
                 String hierLevel = createGridView.Rows[0].Cells[2].Value.ToString();
                 String valcount = createGridView.Rows[0].Cells[3].Value.ToString();
                 String descript = createGridView.Rows[0].Cells[4].Value.ToString();
 
-                hierarchyTable.SetValue("GROUPNAME", "test");
+                hierarchyTable.SetValue("GROUPNAME", groupName);
                 hierarchyTable.SetValue("HIERLEVEL", hierLevel);
                 hierarchyTable.SetValue("VALCOUNT", valcount);
                 hierarchyTable.SetValue("DESCRIPT", descript);
-                //}
 
 
 
@@ -56,6 +57,7 @@ namespace CostCenterGroupBAPI
                 //create.SetValue("HIERARCHYVALUES", hierarchyValuesTable);
                 create.SetValue("CONTROLLINGAREAIMP", contrArea);
                 create.Invoke(rfcDestination);
+                this.Close();
             }
             /*catch (RfcCommunicationException ex)
             {
