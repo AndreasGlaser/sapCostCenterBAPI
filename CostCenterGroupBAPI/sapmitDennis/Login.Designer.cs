@@ -71,6 +71,7 @@
             // 
             this.PassBox.Location = new System.Drawing.Point(93, 112);
             this.PassBox.Name = "PassBox";
+            this.PassBox.PasswordChar = '*';
             this.PassBox.Size = new System.Drawing.Size(100, 20);
             this.PassBox.TabIndex = 4;
             this.PassBox.Text = "6478921As";
@@ -115,8 +116,10 @@
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.connectionlbl);
             this.Controls.Add(this.loginbtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CostCenterGroupBAPI Login";
             this.ResumeLayout(false);
             this.PerformLayout();

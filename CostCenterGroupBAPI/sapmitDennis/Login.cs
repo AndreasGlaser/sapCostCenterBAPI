@@ -29,20 +29,23 @@ namespace CostCenterGroupBAPI
             {
                 RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
             }
-
+           
             Connection.rfcDestination = null;
             Connection.rfcDestination = RfcDestinationManager.GetDestination("costCenter");
             try
             {
                 if (Connection.rfcDestination != null)
                 {
+                    connectionlbl.Text = "connecting ...";
+                    connectionlbl.BackColor = Color.Transparent;
+                    this.Refresh();
                     Connection.rfcDestination.Ping();
                     connectionlbl.Text = "connected";
                     this.Hide();
                     new Overview().ShowDialog();
                     this.Close();
                 }
-
+                
             }
             catch (SAP.Middleware.Connector.RfcLogonException ex)
             {

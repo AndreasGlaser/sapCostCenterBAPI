@@ -76,12 +76,38 @@ namespace CostCenterGroupBAPI
 
         private void getDetailBtn_Click(object sender, EventArgs e)
         {
+            getDetail();
+        }
+
+        void DataWindow_Closing(object sender, CancelEventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void CreateGroupBtn_Click(object sender, EventArgs e)
+        {
+            new CreateGroup().ShowDialog();
+        }
+
+        private void AddNodeBtn_Click(object sender, EventArgs e)
+        {
+            new AddNode().ShowDialog();
+        }
+
+        private void getListGridView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            getDetail();
+        }
+
+        private void getDetail()
+        {
             try
             {
                 RfcRepository rfcRepository = rfcDestination.Repository;
                 var getDetail = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_GETDETAIL");
                 getDetail.Invoke(rfcDestination);
-                
+
 
                 String contrArea = getListGridView.SelectedRows[0].Cells[0].Value.ToString();
                 String groupName = getListGridView.SelectedRows[0].Cells[1].Value.ToString();
@@ -119,27 +145,6 @@ namespace CostCenterGroupBAPI
             {
                 Console.Out.WriteLine(ex.Message);
             }
-        }
-
-        private void getListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        void DataWindow_Closing(object sender, CancelEventArgs e)
-        {
-            this.Close();
-
-        }
-
-        private void CreateGroupBtn_Click(object sender, EventArgs e)
-        {
-            new CreateGroup().ShowDialog();
-        }
-
-        private void AddNodeBtn_Click(object sender, EventArgs e)
-        {
-            new AddNode().ShowDialog();
         }
     }
 }
