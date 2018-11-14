@@ -30,15 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateGroup));
             this.createGridView = new System.Windows.Forms.DataGridView();
-            this.createBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.createCost_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createGroupname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HierLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createValcount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createDescript = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.valueDataGrid = new System.Windows.Forms.DataGridView();
+            this.ValueFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValueTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.createGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.valueDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // createGridView
@@ -61,36 +65,8 @@
             this.createGridView.Name = "createGridView";
             this.createGridView.RowHeadersVisible = false;
             this.createGridView.RowTemplate.Height = 24;
-            this.createGridView.Size = new System.Drawing.Size(659, 99);
+            this.createGridView.Size = new System.Drawing.Size(659, 72);
             this.createGridView.TabIndex = 11;
-            // 
-            // createBtn
-            // 
-            this.createBtn.Location = new System.Drawing.Point(2, 134);
-            this.createBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(112, 19);
-            this.createBtn.TabIndex = 12;
-            this.createBtn.Text = "create CostCenter";
-            this.createBtn.UseVisualStyleBackColor = true;
-            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.createGridView, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.createBtn, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(663, 160);
-            this.tableLayoutPanel1.TabIndex = 13;
             // 
             // createCost_Area
             // 
@@ -122,11 +98,64 @@
             this.createDescript.HeaderText = "Descript";
             this.createDescript.Name = "createDescript";
             // 
+            // createBtn
+            // 
+            this.createBtn.Location = new System.Drawing.Point(2, 216);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.createBtn.Name = "createBtn";
+            this.createBtn.Size = new System.Drawing.Size(112, 19);
+            this.createBtn.TabIndex = 12;
+            this.createBtn.Text = "create CostCenter";
+            this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.valueDataGrid, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.createGridView, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.createBtn, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(663, 243);
+            this.tableLayoutPanel1.TabIndex = 13;
+            // 
+            // valueDataGrid
+            // 
+            this.valueDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.valueDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ValueFrom,
+            this.ValueTo});
+            this.valueDataGrid.Location = new System.Drawing.Point(3, 79);
+            this.valueDataGrid.Name = "valueDataGrid";
+            this.valueDataGrid.Size = new System.Drawing.Size(240, 132);
+            this.valueDataGrid.TabIndex = 14;
+            // 
+            // ValueFrom
+            // 
+            this.ValueFrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ValueFrom.HeaderText = "Value From";
+            this.ValueFrom.Name = "ValueFrom";
+            // 
+            // ValueTo
+            // 
+            this.ValueTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ValueTo.HeaderText = "Value To";
+            this.ValueTo.Name = "ValueTo";
+            // 
             // CreateGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 184);
+            this.ClientSize = new System.Drawing.Size(687, 267);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateGroup";
@@ -134,6 +163,7 @@
             this.Text = "CreateGroup";
             ((System.ComponentModel.ISupportInitialize)(this.createGridView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.valueDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,5 +178,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn createValcount;
         private System.Windows.Forms.DataGridViewTextBoxColumn createDescript;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView valueDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValueFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValueTo;
     }
 }

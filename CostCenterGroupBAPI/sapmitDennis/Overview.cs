@@ -121,7 +121,7 @@ namespace CostCenterGroupBAPI
                 getDetail.Invoke(rfcDestination);
 
                 var table = getDetail.GetTable("HIERARCHYNODES");
-                var table2 = getDetail.GetTable("HIERARCHYVALUES");
+                
                 getDetailGridView.Rows.Clear();
                 for (int i = 0; i < table.RowCount; i++)
                 {
@@ -132,6 +132,17 @@ namespace CostCenterGroupBAPI
                     String[] row = { groupname, hierlevel, valcount, descript };
                     getDetailGridView.Rows.Add(row);
                 }
+
+                var valueTable = getDetail.GetTable("HIERARCHYVALUES");
+                valueDataGrid.Rows.Clear();
+                for (int i = 0; i < valueTable.RowCount; i++)
+                {
+                    String valFrom = valueTable[i].GetString("VALFROM");
+                    String valTo = valueTable[i].GetString("VALTO");
+                    String[] row = { valFrom, valTo};
+                    valueDataGrid.Rows.Add(row);
+                }
+
             }
             catch (RfcCommunicationException ex)
             {

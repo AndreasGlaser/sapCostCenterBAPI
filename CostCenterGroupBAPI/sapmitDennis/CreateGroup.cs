@@ -26,8 +26,6 @@ namespace CostCenterGroupBAPI
         {
             try
             {
-                
-
                 RfcRepository rfcRepository = rfcDestination.Repository;
                 var create = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_CREATE");
                 create.Invoke(rfcDestination);
@@ -38,9 +36,7 @@ namespace CostCenterGroupBAPI
 
                 var hierarchyTable = create.GetTable("HIERARCHYNODES");
                 hierarchyTable.Append();
-                IRfcTable hierarchyValuesTable = create.GetTable("HIERARCHYVALUES");
-
-
+                
                 String groupName = createGridView.Rows[0].Cells[1].Value.ToString();
                 String hierLevel = createGridView.Rows[0].Cells[2].Value.ToString();
                 String valcount = createGridView.Rows[0].Cells[3].Value.ToString();
@@ -52,9 +48,27 @@ namespace CostCenterGroupBAPI
                 hierarchyTable.SetValue("DESCRIPT", descript);
 
 
+                IRfcTable hierarchyValuesTable = create.GetTable("HIERARCHYVALUES");
+                //Ohne Append können die Values nicht gesetzt werden
+                hierarchyValuesTable.Append();
+                for(int i = 0; i+1 < valueDataGrid.RowCount; i++)
+                {
+                    hierarchyValuesTable.Insert();
+                    hierarchyValuesTable.CurrentIndex = hierarchyValuesTable.Count - 1;
+
+                    hierarchyValuesTable[i].SetValue("VALFROM", valueDataGrid.Rows[i].Cells[0].Value.ToString());
+                    hierarchyValuesTable[i].SetValue("VALTO", valueDataGrid.Rows[i].Cells[1].Value.ToString());
+                }
+
+                for (int i = 0; i + 1 < valueDataGrid.RowCount; i++)
+                {
+                    Console.Out.WriteLine(hierarchyValuesTable[i].GetString("VALFROM"));
+                    
+                }
+
 
                 create.SetValue("HIERARCHYNODES", hierarchyTable);
-                //create.SetValue("HIERARCHYVALUES", hierarchyValuesTable);
+                create.SetValue("HIERARCHYVALUES", hierarchyValuesTable);
                 create.SetValue("CONTROLLINGAREAIMP", contrArea);
                 create.Invoke(rfcDestination);
                 this.Close();

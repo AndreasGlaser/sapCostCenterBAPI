@@ -46,10 +46,19 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.topNodesCheckBox = new System.Windows.Forms.CheckBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.valueDataGrid = new System.Windows.Forms.DataGridView();
+            this.ValFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.valueDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // getListBtn
@@ -144,12 +153,12 @@
             this.ValCount,
             this.Descript});
             this.getDetailGridView.EnableHeadersVisualStyles = false;
-            this.getDetailGridView.Location = new System.Drawing.Point(483, 40);
+            this.getDetailGridView.Location = new System.Drawing.Point(3, 3);
             this.getDetailGridView.Name = "getDetailGridView";
             this.getDetailGridView.ReadOnly = true;
             this.getDetailGridView.RowHeadersVisible = false;
             this.getDetailGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.getDetailGridView.Size = new System.Drawing.Size(474, 350);
+            this.getDetailGridView.Size = new System.Drawing.Size(468, 176);
             this.getDetailGridView.TabIndex = 9;
             // 
             // Groupname2
@@ -208,10 +217,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.splitContainer1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.getListGridView, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.getDetailBtn, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.getDetailGridView, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 58);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -240,6 +249,46 @@
             this.topNodesCheckBox.Text = "only Top Nodes";
             this.topNodesCheckBox.UseVisualStyleBackColor = true;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(483, 40);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.getDetailGridView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.valueDataGrid);
+            this.splitContainer1.Size = new System.Drawing.Size(474, 350);
+            this.splitContainer1.SplitterDistance = 182;
+            this.splitContainer1.TabIndex = 15;
+            // 
+            // valueDataGrid
+            // 
+            this.valueDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.valueDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ValFrom,
+            this.ValTo});
+            this.valueDataGrid.Location = new System.Drawing.Point(0, -1);
+            this.valueDataGrid.Name = "valueDataGrid";
+            this.valueDataGrid.Size = new System.Drawing.Size(471, 162);
+            this.valueDataGrid.TabIndex = 0;
+            // 
+            // ValFrom
+            // 
+            this.ValFrom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ValFrom.HeaderText = "Value From";
+            this.ValFrom.Name = "ValFrom";
+            // 
+            // ValTo
+            // 
+            this.ValTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ValTo.HeaderText = "Value To";
+            this.ValTo.Name = "ValTo";
+            // 
             // Overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +309,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.valueDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,6 +336,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.CheckBox topNodesCheckBox;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridView valueDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValTo;
     }
 }
 
