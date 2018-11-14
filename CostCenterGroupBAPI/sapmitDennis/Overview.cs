@@ -22,7 +22,7 @@ namespace CostCenterGroupBAPI
 
         
 
-        private void button2_Click(object sender, EventArgs e)
+        private void getListBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -30,6 +30,10 @@ namespace CostCenterGroupBAPI
                 var getList = rfcRepository.CreateFunction("BAPI_COSTCENTERGROUP_GETLIST");
                 getList.Invoke(rfcDestination);
                 getList.SetValue("CONTROLLINGAREAMASK", CostAreaSearch.Text);
+                if (topNodesCheckBox.Checked)
+                {
+                    getList.SetValue("TOPNODESONLY", "X");
+                }
                 getList.Invoke(rfcDestination);
 
                 var table = getList.GetTable("GROUPLIST");

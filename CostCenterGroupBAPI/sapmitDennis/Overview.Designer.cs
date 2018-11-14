@@ -45,6 +45,7 @@
             this.AddNodeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.topNodesCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -60,7 +61,7 @@
             this.getListBtn.TabIndex = 2;
             this.getListBtn.Text = "GetList";
             this.getListBtn.UseVisualStyleBackColor = true;
-            this.getListBtn.Click += new System.EventHandler(this.button2_Click);
+            this.getListBtn.Click += new System.EventHandler(this.getListBtn_Click);
             // 
             // getListGridView
             // 
@@ -223,10 +224,21 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.getListBtn);
             this.flowLayoutPanel1.Controls.Add(this.CostAreaSearch);
+            this.flowLayoutPanel1.Controls.Add(this.topNodesCheckBox);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 30);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(474, 30);
             this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // topNodesCheckBox
+            // 
+            this.topNodesCheckBox.AutoSize = true;
+            this.topNodesCheckBox.Location = new System.Drawing.Point(169, 3);
+            this.topNodesCheckBox.Name = "topNodesCheckBox";
+            this.topNodesCheckBox.Size = new System.Drawing.Size(101, 17);
+            this.topNodesCheckBox.TabIndex = 8;
+            this.topNodesCheckBox.Text = "only Top Nodes";
+            this.topNodesCheckBox.UseVisualStyleBackColor = true;
             // 
             // Overview
             // 
@@ -269,6 +281,7 @@
         private System.Windows.Forms.Button AddNodeBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.CheckBox topNodesCheckBox;
     }
 }
 
