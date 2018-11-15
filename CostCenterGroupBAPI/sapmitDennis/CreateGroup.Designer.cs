@@ -138,6 +138,8 @@
             this.valueDataGrid.Name = "valueDataGrid";
             this.valueDataGrid.Size = new System.Drawing.Size(240, 132);
             this.valueDataGrid.TabIndex = 14;
+            this.valueDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.valueDataGrid_CellContentClick);
+            this.valueDataGrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.valueDataGrid_RowsAdded);
             // 
             // ValueFrom
             // 

@@ -91,5 +91,16 @@ namespace CostCenterGroupBAPI
                 Console.Out.WriteLine(ex.StackTrace);
             }
         }
+
+        private void valueDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void valueDataGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            createGridView.Rows[0].Cells[3].Value = Int16.Parse(createGridView.Rows[0].Cells[3].Value.ToString()) + 1;
+            
+        }
     }
 }
