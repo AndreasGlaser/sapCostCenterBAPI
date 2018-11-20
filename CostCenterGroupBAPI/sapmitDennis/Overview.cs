@@ -161,5 +161,15 @@ namespace CostCenterGroupBAPI
                 Console.Out.WriteLine(ex.Message);
             }
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void splitContainer2_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }

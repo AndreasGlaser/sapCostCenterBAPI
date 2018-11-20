@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overview));
             this.getListBtn = new System.Windows.Forms.Button();
             this.getListGridView = new System.Windows.Forms.DataGridView();
@@ -44,21 +45,28 @@
             this.CreateGroupBtn = new System.Windows.Forms.Button();
             this.AddNodeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.topNodesCheckBox = new System.Windows.Forms.CheckBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.valueDataGrid = new System.Windows.Forms.DataGridView();
             this.ValFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.topNodesCheckBox = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valueDataGrid)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // getListBtn
@@ -69,6 +77,7 @@
             this.getListBtn.Size = new System.Drawing.Size(56, 19);
             this.getListBtn.TabIndex = 2;
             this.getListBtn.Text = "GetList";
+            this.toolTip1.SetToolTip(this.getListBtn, "loads all Groups with the given Cost Area\r\n");
             this.getListBtn.UseVisualStyleBackColor = true;
             this.getListBtn.Click += new System.EventHandler(this.getListBtn_Click);
             // 
@@ -91,8 +100,11 @@
             this.getListGridView.ReadOnly = true;
             this.getListGridView.RowHeadersVisible = false;
             this.getListGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.getListGridView.ShowCellToolTips = false;
             this.getListGridView.Size = new System.Drawing.Size(474, 350);
             this.getListGridView.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.getListGridView, "Cost_Area: the Cost Area of the loaded Groups\r\nGroupname: the name of the groups\r" +
+        "\nDescript: the description of the groups");
             this.getListGridView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.getListGridView_MouseDoubleClick);
             // 
             // Cost_Area
@@ -121,11 +133,12 @@
             // 
             // CostAreaSearch
             // 
-            this.CostAreaSearch.Location = new System.Drawing.Point(63, 3);
+            this.CostAreaSearch.Location = new System.Drawing.Point(3, 3);
             this.CostAreaSearch.Name = "CostAreaSearch";
             this.CostAreaSearch.Size = new System.Drawing.Size(100, 20);
             this.CostAreaSearch.TabIndex = 7;
             this.CostAreaSearch.Text = "1000";
+            this.toolTip1.SetToolTip(this.CostAreaSearch, "Specifies the Cost Area");
             this.CostAreaSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // getDetailBtn
@@ -135,6 +148,7 @@
             this.getDetailBtn.Size = new System.Drawing.Size(93, 23);
             this.getDetailBtn.TabIndex = 8;
             this.getDetailBtn.Text = "Load Hierarchy";
+            this.toolTip1.SetToolTip(this.getDetailBtn, "loads the hierarchy of the selected group (alt. douple click a group)");
             this.getDetailBtn.UseVisualStyleBackColor = true;
             this.getDetailBtn.Click += new System.EventHandler(this.getDetailBtn_Click);
             // 
@@ -158,8 +172,10 @@
             this.getDetailGridView.ReadOnly = true;
             this.getDetailGridView.RowHeadersVisible = false;
             this.getDetailGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.getDetailGridView.ShowCellToolTips = false;
             this.getDetailGridView.Size = new System.Drawing.Size(468, 176);
             this.getDetailGridView.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.getDetailGridView, resources.GetString("getDetailGridView.ToolTip"));
             // 
             // Groupname2
             // 
@@ -196,6 +212,7 @@
             this.CreateGroupBtn.Size = new System.Drawing.Size(111, 23);
             this.CreateGroupBtn.TabIndex = 12;
             this.CreateGroupBtn.Text = "Create new Group";
+            this.toolTip1.SetToolTip(this.CreateGroupBtn, "opens a new window to specify a new group to create\r\n");
             this.CreateGroupBtn.UseVisualStyleBackColor = true;
             this.CreateGroupBtn.Click += new System.EventHandler(this.CreateGroupBtn_Click);
             // 
@@ -206,6 +223,7 @@
             this.AddNodeBtn.Size = new System.Drawing.Size(97, 23);
             this.AddNodeBtn.TabIndex = 13;
             this.AddNodeBtn.Text = "Add Subgroup";
+            this.toolTip1.SetToolTip(this.AddNodeBtn, "opens a window to add on group to another as an subgroup");
             this.AddNodeBtn.UseVisualStyleBackColor = true;
             this.AddNodeBtn.Click += new System.EventHandler(this.AddNodeBtn_Click);
             // 
@@ -228,26 +246,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.49477F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(960, 393);
             this.tableLayoutPanel1.TabIndex = 14;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.getListBtn);
-            this.flowLayoutPanel1.Controls.Add(this.CostAreaSearch);
-            this.flowLayoutPanel1.Controls.Add(this.topNodesCheckBox);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(474, 30);
-            this.flowLayoutPanel1.TabIndex = 10;
-            // 
-            // topNodesCheckBox
-            // 
-            this.topNodesCheckBox.AutoSize = true;
-            this.topNodesCheckBox.Location = new System.Drawing.Point(169, 3);
-            this.topNodesCheckBox.Name = "topNodesCheckBox";
-            this.topNodesCheckBox.Size = new System.Drawing.Size(101, 17);
-            this.topNodesCheckBox.TabIndex = 8;
-            this.topNodesCheckBox.Text = "only Top Nodes";
-            this.topNodesCheckBox.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -274,6 +272,7 @@
             this.ValTo});
             this.valueDataGrid.Location = new System.Drawing.Point(0, -1);
             this.valueDataGrid.Name = "valueDataGrid";
+            this.valueDataGrid.ShowCellToolTips = false;
             this.valueDataGrid.Size = new System.Drawing.Size(471, 162);
             this.valueDataGrid.TabIndex = 0;
             // 
@@ -288,6 +287,57 @@
             this.ValTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ValTo.HeaderText = "Value To";
             this.ValTo.Name = "ValTo";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.getListBtn);
+            this.flowLayoutPanel1.Controls.Add(this.splitContainer2);
+            this.flowLayoutPanel1.Controls.Add(this.topNodesCheckBox);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(474, 30);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // topNodesCheckBox
+            // 
+            this.topNodesCheckBox.AutoSize = true;
+            this.topNodesCheckBox.Location = new System.Drawing.Point(241, 3);
+            this.topNodesCheckBox.Name = "topNodesCheckBox";
+            this.topNodesCheckBox.Size = new System.Drawing.Size(101, 17);
+            this.topNodesCheckBox.TabIndex = 8;
+            this.topNodesCheckBox.Text = "only Top Nodes";
+            this.toolTip1.SetToolTip(this.topNodesCheckBox, "toggles if groups with higher Hierarchy Level than 0 will be displayed\r\n");
+            this.topNodesCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Cost Area:";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Location = new System.Drawing.Point(63, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.CostAreaSearch);
+            this.splitContainer2.Size = new System.Drawing.Size(172, 28);
+            this.splitContainer2.SplitterDistance = 65;
+            this.splitContainer2.TabIndex = 16;
+            this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer2_SplitterMoved);
             // 
             // Overview
             // 
@@ -307,13 +357,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.getListGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDetailGridView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.valueDataGrid)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -340,6 +396,9 @@
         private System.Windows.Forms.DataGridView valueDataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValFrom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValTo;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

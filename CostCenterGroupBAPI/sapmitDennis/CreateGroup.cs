@@ -18,7 +18,7 @@ namespace CostCenterGroupBAPI
         {
             
             InitializeComponent();
-            String[] row = { "1000", "ATEST", "0", "0", "TestTest2" };
+            String[] row = { "1000", "ATEST", "0", "TestTest2" };
             createGridView.Rows.Add(row);
         }
 
@@ -38,9 +38,9 @@ namespace CostCenterGroupBAPI
                 hierarchyTable.Append();
                 
                 String groupName = createGridView.Rows[0].Cells[1].Value.ToString();
-                String hierLevel = createGridView.Rows[0].Cells[2].Value.ToString();
-                String valcount = createGridView.Rows[0].Cells[3].Value.ToString();
-                String descript = createGridView.Rows[0].Cells[4].Value.ToString();
+                String hierLevel = "0";
+                String valcount = createGridView.Rows[0].Cells[2].Value.ToString();
+                String descript = createGridView.Rows[0].Cells[3].Value.ToString();
 
                 hierarchyTable.SetValue("GROUPNAME", groupName);
                 hierarchyTable.SetValue("HIERLEVEL", hierLevel);
@@ -101,6 +101,11 @@ namespace CostCenterGroupBAPI
         {
             createGridView.Rows[0].Cells[3].Value = Int16.Parse(createGridView.Rows[0].Cells[3].Value.ToString()) + 1;
             
+        }
+
+        private void createGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

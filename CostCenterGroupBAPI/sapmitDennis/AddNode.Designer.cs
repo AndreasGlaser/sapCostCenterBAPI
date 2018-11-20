@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNode));
             this.AddGridView = new System.Windows.Forms.DataGridView();
             this.AddBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ControllingArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubGroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +68,12 @@
             this.AddGridView.Name = "AddGridView";
             this.AddGridView.RowHeadersVisible = false;
             this.AddGridView.RowTemplate.Height = 24;
+            this.AddGridView.ShowCellToolTips = false;
             this.AddGridView.Size = new System.Drawing.Size(650, 74);
             this.AddGridView.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.AddGridView, "Cost Area: specifies the Cost Area of the groups.\r\nGroupName: specifies the name " +
+        "of the super group.\r\nSubGroupName: specifies the name of the sub group.\r\nThe gro" +
+        "ups must already exist.");
             // 
             // AddBtn
             // 
@@ -77,6 +83,8 @@
             this.AddBtn.Size = new System.Drawing.Size(112, 19);
             this.AddBtn.TabIndex = 13;
             this.AddBtn.Text = "Add Node to Center";
+            this.toolTip1.SetToolTip(this.AddBtn, "Adds the subgroup as the last subgroup to the hierarchy of the specified supergro" +
+        "up.");
             this.AddBtn.UseVisualStyleBackColor = true;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -100,7 +108,7 @@
             // ControllingArea
             // 
             this.ControllingArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ControllingArea.HeaderText = "ControllingArea";
+            this.ControllingArea.HeaderText = "Cost Area";
             this.ControllingArea.Name = "ControllingArea";
             // 
             // GroupName
@@ -135,9 +143,10 @@
 
         private System.Windows.Forms.DataGridView AddGridView;
         private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ControllingArea;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubGroupName;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
