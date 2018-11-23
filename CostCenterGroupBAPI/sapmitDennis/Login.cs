@@ -14,38 +14,30 @@ namespace CostCenterGroupBAPI
 {
     public partial class Login : Form
     {
-
+        static connector sapconnector = new connector();
+       
         public Login()
         {
             InitializeComponent();
+           
+            RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
+            
         }
 
         private void loginbtn_Click(object sender, EventArgs e)
-        {
-            connector sapconnector = new connector();
-            
-            Console.Out.WriteLine(RfcDestinationManager.IsDestinationConfigurationRegistered());
-            if (!RfcDestinationManager.IsDestinationConfigurationRegistered())
-            {
-                RfcDestinationManager.RegisterDestinationConfiguration(sapconnector);
-            }
-           
-            Connection.rfcDestination = null;
-            Connection.rfcDestination = RfcDestinationManager.GetDestination("costCenter");
+        { 
             try
             {
-                if (Connection.rfcDestination != null)
-                {
-                    connectionlbl.Text = "connecting ...";
-                    connectionlbl.BackColor = Color.Transparent;
-                    this.Refresh();
-                    Connection.rfcDestination.Ping();
-                    connectionlbl.Text = "connected";
-                    this.Hide();
-                    new Overview().ShowDialog();
-                    this.Close();
-                }
-                
+                Connection.rfcDestination = RfcDestinationManager.GetDestination("costCenter");
+                connectionlbl.Text = "connecting ...";
+                connectionlbl.BackColor = Color.Transparent;
+                this.Refresh();
+                   
+                Connection.rfcDestination.Ping();
+                connectionlbl.Text = "connected";
+                this.Hide();
+                new Overview().ShowDialog();
+                this.Close(); 
             }
             catch (SAP.Middleware.Connector.RfcLogonException ex)
             {

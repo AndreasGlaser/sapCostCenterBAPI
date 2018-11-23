@@ -31,7 +31,7 @@ namespace CostCenterGroupBAPI
             param.Add(RfcConfigParameters.Language, ConfigurationManager.AppSettings["SAP_LANGUAGE"]);
             param.Add(RfcConfigParameters.PoolSize, ConfigurationManager.AppSettings["SAP_POOLSIZE"]);
 
-
+            
             return param;
 
         }

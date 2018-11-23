@@ -3,7 +3,6 @@ I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\CostCenterGroupBAPI.pdb
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\sapnco.dll
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\sapnco_utils.dll
-I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.csprojAssemblyReference.cache
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.AddNode.resources
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.CreateGroup.resources
 I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.Overview.resources
