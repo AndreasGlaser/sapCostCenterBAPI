@@ -99,7 +99,7 @@ namespace CostCenterGroupBAPI
 
         private void valueDataGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            createGridView.Rows[0].Cells[3].Value = Int16.Parse(createGridView.Rows[0].Cells[3].Value.ToString()) + 1;
+            createGridView.Rows[0].Cells[2].Value = valueDataGrid.Rows.Count -1;
             
         }
 
