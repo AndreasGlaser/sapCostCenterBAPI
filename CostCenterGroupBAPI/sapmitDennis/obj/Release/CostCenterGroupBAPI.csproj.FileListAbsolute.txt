@@ -1,0 +1,16 @@
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\CostCenterGroupBAPI.exe.config
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\CostCenterGroupBAPI.exe
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\CostCenterGroupBAPI.pdb
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\sapnco.dll
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\bin\Release\sapnco_utils.dll
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.csprojAssemblyReference.cache
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.AddNode.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.CreateGroup.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.Overview.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.Login.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.Properties.Resources.resources
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.csproj.GenerateResource.cache
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.csproj.CoreCompileInputs.cache
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.csproj.CopyComplete
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.exe
+I:\Workspaces\GitHub\sapCostCenter\CostCenterGroupBAPI\sapmitDennis\obj\Release\CostCenterGroupBAPI.pdb
